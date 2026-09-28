@@ -1,4 +1,4 @@
-/* ALMARA — interacciones y animaciones (vanilla JS, sin dependencias) */
+/* BAMBÜH — interacciones y animaciones (vanilla JS, sin dependencias) */
 (() => {
   const root = document.documentElement;
   root.classList.add('js');
@@ -112,7 +112,7 @@
   // Formulario → abre el cliente de correo con el mensaje preparado
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
-  const MAIL_TO = 'hola@almara.es';
+  const MAIL_TO = 'hola@bambuh.es';
   const setError = (input, msg) => {
     const field = input.closest('.field');
     field.classList.toggle('has-error', Boolean(msg));
@@ -138,7 +138,7 @@
     const fecha = d.fecha ? new Date(d.fecha).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }) : 'Por definir';
     const subject = `Solicitud de dossier · ${d.tipo} · ${d.nombre}`;
     const body = [
-      'Hola Almara,',
+      'Hola Bambüh,',
       '',
       'Me gustaría recibir vuestro dossier. Estos son los datos de mi evento:',
       '',
