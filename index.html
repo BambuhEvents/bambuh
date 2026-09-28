@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Almara · Chill outs para bodas y eventos</title>
+  <meta name="description" content="Almara crea chill outs de alquiler para bodas y eventos, combinando diseño, naturaleza y comodidad. Ambientes que se recuerdan.">
+  <meta name="theme-color" content="#303120">
+  <meta property="og:title" content="Almara · Chill outs para eventos">
+  <meta property="og:description" content="Más que mobiliario, ambientes que se recuerdan.">
+  <meta property="og:image" content="assets/img/hero.jpg">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=6">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- Cabecera -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="#inicio" class="header__logo" aria-label="Almara, volver al inicio">
+        <img src="assets/img/logo-dark.png" alt="Almara" class="logo logo--dark" width="1025" height="169">
+        <img src="assets/img/logo-light.png" alt="" aria-hidden="true" class="logo logo--light" width="1025" height="169">
+      </a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+          <li><a href="#servicios" class="nav__link">Servicios</a></li>
+          <li><a href="#ambientes" class="nav__link">Ambientes</a></li>
+          <li><a href="#proceso" class="nav__link">Cómo trabajamos</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+        <a href="#contacto" class="btn btn--small nav__cta">Solicita tu dossier</a>
+        <div class="nav__extra">
+          <img src="assets/img/monogram-light.png" alt="" aria-hidden="true" width="190" height="167">
+          <a href="mailto:hola@almara.es">hola@almara.es</a>
+          <a href="https://instagram.com/almara.eventos" target="_blank" rel="noopener">@almara.eventos</a>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/img/hero.jpg" alt="" class="hero__img" width="1590" height="1245" fetchpriority="high">
+      </div>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__content container">
+        <p class="eyebrow hero__eyebrow" data-hero="1">Chill outs para bodas y eventos</p>
+        <h1 class="hero__title">
+          <span class="line"><span data-hero="2">Más que mobiliario,</span></span>
+          <span class="line"><em data-hero="3">ambientes que se recuerdan.</em></span>
+        </h1>
+        <p class="hero__lead" data-hero="4">Diseño, naturaleza y comodidad en cada detalle.</p>
+        <div class="hero__actions" data-hero="5">
+          <a href="#contacto" class="btn btn--dark">Solicita tu dossier</a>
+          <a href="#ambientes" class="btn btn--ghost">Ver ambientes</a>
+        </div>
+      </div>
+      <a href="#nosotros" class="hero__scroll" aria-label="Desplazarse a Nosotros">
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+
+    <!-- Nosotros -->
+    <section class="section about" id="nosotros">
+      <div class="container about__grid">
+        <div class="about__text">
+          <p class="eyebrow reveal">Nosotros</p>
+          <h2 class="section-title reveal">Creamos rincones donde <em>apetece quedarse</em>.</h2>
+          <p class="reveal">En Almara diseñamos chill outs de alquiler para bodas y eventos, combinando diseño, naturaleza y comodidad. Transformamos espacios en experiencias únicas, donde cada detalle invita a disfrutar.</p>
+          <p class="reveal">Somos un grupo de amigos con una idea sencilla: que los momentos entre momentos —la sobremesa, el cóctel, la última copa— también se vivan con estilo.</p>
+          <p class="about__signature reveal">Natural. Elegante. Atemporal.</p>
+        </div>
+        <figure class="about__media">
+          <div class="about__photo reveal-img">
+            <img src="assets/img/night-tall.jpg" alt="Chill out con sofás de bambú y cojines blancos bajo guirnaldas de luces al anochecer" width="570" height="722" loading="lazy">
+          </div>
+          <img src="assets/img/monogram-dark.png" alt="" aria-hidden="true" class="about__monogram" width="190" height="167" loading="lazy">
+        </figure>
+      </div>
+
+      <ul class="values container" role="list">
+        <li class="value reveal">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14Z"/><path d="M5 19 13 11"/></svg>
+          <h3>Diseño natural</h3>
+          <p>Bambú, ratán, lino y algodón. Materiales nobles que se funden con el entorno.</p>
+        </li>
+        <li class="value reveal">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <h3>Eventos únicos</h3>
+          <p>Cada composición se piensa para tu espacio, tu estilo y tu número de invitados.</p>
+        </li>
+        <li class="value reveal">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
+          <h3>Calidad premium</h3>
+          <p>Piezas cuidadas, textiles limpios y un montaje impecable, sin sorpresas.</p>
+        </li>
+        <li class="value reveal">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V10"/><path d="M12 14c-3 0-5-2-5-5 3 0 5 2 5 5ZM12 11c0-3 2-5 5-5 0 3-2 5-5 5Z"/><path d="M8 21h8"/></svg>
+          <h3>Sostenibilidad real</h3>
+          <p>Mobiliario reutilizable y duradero. Alquilar también es una forma de cuidar.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Servicios -->
+    <section class="section services" id="servicios">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal">Servicios</p>
+          <h2 class="section-title reveal">Empezamos por el chill out. <em>Y seguimos creciendo.</em></h2>
+          <p class="section-lead reveal">Hoy somos especialistas en zonas chill out. Mañana, todo lo que necesite tu evento para sentirse como en casa.</p>
+        </header>
+
+        <div class="services__grid">
+          <article class="service service--featured reveal">
+            <div class="service__media">
+              <img src="assets/img/hero.jpg" alt="Zona chill out con sofás de bambú frente al mar al atardecer" width="1590" height="1245" loading="lazy">
+            </div>
+            <div class="service__body">
+              <span class="badge">Disponible</span>
+              <h3>Chill outs</h3>
+              <p>Sofás, butacas, mesas bajas, alfombras, cojines y pequeños detalles de ambientación. Composiciones completas listas para disfrutar en jardines, fincas, terrazas o la playa.</p>
+              <ul class="service__list">
+                <li>Composiciones a medida del espacio</li>
+                <li>Transporte, montaje y recogida</li>
+                <li>Textiles y complementos incluidos</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service reveal">
+            <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c2 3 2 6 0 9-2-3-2-6 0-9Z"/><path d="M12 12c3-1 6 0 8 2-3 1-6 0-8-2ZM12 12c-3-1-6 0-8 2 3 1 6 0 8-2Z"/><path d="M12 12v9"/></svg>
+            <span class="badge badge--soon">Próximamente</span>
+            <h3>Decoración</h3>
+            <p>Centros, arreglos florales secos, vajilla y piezas de ambientación con la misma esencia natural.</p>
+          </article>
+
+          <article class="service reveal">
+            <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5c5 4 15 4 20 0"/><path d="M6 7.5v2M12 8.8v2M18 7.5v2"/><circle cx="6" cy="11.5" r="1.6"/><circle cx="12" cy="12.8" r="1.6"/><circle cx="18" cy="11.5" r="1.6"/></svg>
+            <span class="badge badge--soon">Próximamente</span>
+            <h3>Iluminación</h3>
+            <p>Guirnaldas, farolillos y luz cálida para que la noche tenga la misma magia que el atardecer.</p>
+          </article>
+
+          <article class="service reveal">
+            <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 13h20L12 3Z"/><path d="M4 13v8M20 13v8M12 3v18"/><path d="M8 21l4-8 4 8"/></svg>
+            <span class="badge badge--soon">Próximamente</span>
+            <h3>Carpas</h3>
+            <p>Estructuras elegantes para proteger del sol o del relente sin renunciar al estilo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Para quién -->
+    <section class="section audience">
+      <div class="container audience__grid">
+        <div class="audience__item reveal">
+          <span class="audience__num">01</span>
+          <h3>Bodas</h3>
+          <p>Para el cóctel, la sobremesa o la fiesta. Un espacio donde tus invitados se sientan en casa.</p>
+        </div>
+        <div class="audience__item reveal">
+          <span class="audience__num">02</span>
+          <h3>Celebraciones</h3>
+          <p>Cumpleaños, aniversarios, comuniones o una cena especial al aire libre.</p>
+        </div>
+        <div class="audience__item reveal">
+          <span class="audience__num">03</span>
+          <h3>Empresas</h3>
+          <p>Eventos corporativos, presentaciones y afterworks con una imagen cuidada y cercana.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ambientes / galería -->
+    <section class="section gallery" id="ambientes">
+      <div class="container">
+        <header class="section-head section-head--row">
+          <div>
+            <p class="eyebrow reveal">Ambientes</p>
+            <h2 class="section-title reveal">Detalles que <em>se sienten</em>.</h2>
+          </div>
+          <p class="section-lead reveal">Una pequeña muestra de nuestra estética. Pídenos el dossier completo y te enviamos todas las composiciones.</p>
+        </header>
+
+        <div class="gallery__grid">
+          <figure class="gallery__item gallery__item--wide reveal-img">
+            <img src="assets/img/night.jpg" alt="Terraza con chill out iluminado por guirnaldas junto a un edificio histórico" width="994" height="418" loading="lazy">
+            <figcaption>Noches de verano</figcaption>
+          </figure>
+          <figure class="gallery__item gallery__item--tall reveal-img">
+            <img src="assets/img/cushion.jpg" alt="Detalle de cojín de lino con el logotipo de Almara sobre un brazo de bambú" width="530" height="722" loading="lazy">
+            <figcaption>Textiles naturales</figcaption>
+          </figure>
+          <figure class="gallery__item reveal-img">
+            <img src="assets/img/box.jpg" alt="Caja de cartón kraft con cinta verde oliva y sello Almara" width="690" height="820" loading="lazy">
+            <figcaption>Cuidado en cada detalle</figcaption>
+          </figure>
+          <figure class="gallery__item reveal-img">
+            <img src="assets/img/cards.jpg" alt="Tarjetas de visita de Almara en crema y verde oliva entre hojas de olivo" width="836" height="820" loading="lazy">
+            <figcaption>Identidad Almara</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="section process" id="proceso">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow eyebrow--light reveal">Cómo trabajamos</p>
+          <h2 class="section-title reveal">Sencillo, cercano y <em>sin prisas</em>.</h2>
+        </header>
+        <ol class="steps" role="list">
+          <li class="step reveal">
+            <span class="step__num">I</span>
+            <h3>Nos escribes</h3>
+            <p>Cuéntanos la fecha, el lugar, el tipo de evento y cuántos invitados esperas.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">II</span>
+            <h3>Te enviamos el dossier</h3>
+            <p>Recibes por email nuestras composiciones, piezas disponibles y condiciones.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">III</span>
+            <h3>Diseñamos juntos</h3>
+            <p>Adaptamos el ambiente a tu espacio y a tu estilo hasta que sea exactamente lo que imaginas.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">IV</span>
+            <h3>Montaje y recogida</h3>
+            <p>Llegamos, montamos y desaparecemos. Tú solo tienes que disfrutar.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Frase -->
+    <section class="quote" aria-label="Lema">
+      <div class="quote__media" aria-hidden="true">
+        <img src="assets/img/night.jpg" alt="" data-parallax width="994" height="418" loading="lazy">
+      </div>
+      <div class="quote__veil" aria-hidden="true"></div>
+      <blockquote class="quote__text container">
+        <p class="reveal">Diseño que <em>se vive</em>.</p>
+        <img src="assets/img/monogram-light.png" alt="" aria-hidden="true" class="quote__mono reveal" width="190" height="167" loading="lazy">
+      </blockquote>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section contact" id="contacto">
+      <div class="container contact__grid">
+        <div class="contact__intro">
+          <p class="eyebrow reveal">Contacto</p>
+          <h2 class="section-title reveal">Hablemos de <em>tu evento</em>.</h2>
+          <p class="reveal">Escríbenos y te enviaremos nuestro dossier con todas las composiciones y condiciones. Respondemos personalmente a cada mensaje.</p>
+          <ul class="contact__list reveal" role="list">
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
+              <a href="mailto:hola@almara.es">hola@almara.es</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>
+              <a href="https://instagram.com/almara.eventos" target="_blank" rel="noopener">@almara.eventos</a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="form__row">
+            <div class="field">
+              <label for="f-name">Nombre <span aria-hidden="true">*</span></label>
+              <input id="f-name" name="nombre" type="text" autocomplete="name" required aria-describedby="e-name">
+              <p class="field__error" id="e-name" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-email">Email <span aria-hidden="true">*</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+              <p class="field__error" id="e-email" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="form__row form__row--pair">
+            <div class="field">
+              <label for="f-type">Evento</label>
+              <select id="f-type" name="tipo">
+                <option>Boda</option>
+                <option>Celebración privada</option>
+                <option>Evento de empresa</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-date">Fecha</label>
+              <input id="f-date" name="fecha" type="date">
+            </div>
+          </div>
+          <div class="form__row form__row--pair">
+            <div class="field">
+              <label for="f-place">Lugar</label>
+              <input id="f-place" name="lugar" type="text" autocomplete="address-level2">
+            </div>
+            <div class="field">
+              <label for="f-guests">Invitados</label>
+              <input id="f-guests" name="invitados" type="number" min="1" inputmode="numeric">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-msg">Cuéntanos un poco más</label>
+            <textarea id="f-msg" name="mensaje" rows="4" placeholder="Estilo, espacio, ideas…"></textarea>
+          </div>
+          <button type="submit" class="btn btn--dark form__submit">
+            Solicitar dossier
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form__note">Al enviar se abrirá tu aplicación de correo con el mensaje preparado.</p>
+          <p class="form__status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-bar" id="mobileBar" aria-hidden="true">
+    <a href="#contacto" class="btn btn--dark mobile-bar__cta" tabindex="-1">Solicita tu dossier</a>
+    <a href="mailto:hola@almara.es" class="mobile-bar__mail" aria-label="Escríbenos por email" tabindex="-1">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
+    </a>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img src="assets/img/logo-light.png" alt="Almara" class="footer__logo" width="1025" height="169" loading="lazy">
+      <p class="footer__tag">Chill outs para eventos</p>
+      <nav class="footer__nav" aria-label="Pie de página">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#ambientes">Ambientes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <p class="footer__copy">© <span id="year">2026</span> Almara · Natural. Elegante. Atemporal.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=6" defer></script>
+</body>
+</html>
