@@ -185,8 +185,11 @@
       form.reset();
       setStatus(`¡Gracias, ${d.nombre}! Hemos recibido tu solicitud y te escribiremos muy pronto a ${d.email}.`);
     } catch {
-      setStatus(`No hemos podido enviar el formulario. Inténtalo de nuevo o escríbenos a ${MAIL_TO}.`, true);
-      status.innerHTML = status.textContent.replace(MAIL_TO, `<a href="${mailto}">${MAIL_TO}</a>`);
+      // Fallback: abre el cliente de correo con el mensaje preparado (y deja el enlace por si el navegador lo bloquea)
+      setStatus('No hemos podido enviar el formulario. Te abrimos tu correo con el mensaje preparado; si no se abre, escríbenos a ', true);
+      const link = Object.assign(document.createElement('a'), { href: mailto, textContent: MAIL_TO });
+      status.append(link, '.');
+      window.location.href = mailto;
     } finally {
       submitBtn.disabled = false;
       submitLabel.textContent = 'Solicitar dossier';
