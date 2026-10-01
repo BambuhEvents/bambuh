@@ -491,6 +491,8 @@ body::after {
 .form__status { font-size: .95rem; color: var(--olive-700); }
 .form__status:empty { display: none; }
 .form__status.is-error { color: #9B3B2A; }
+.form__status a { font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.form__status a:hover { text-decoration-thickness: 2px; }
 .form__submit[disabled] { opacity: .6; cursor: progress; }
 .form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 
