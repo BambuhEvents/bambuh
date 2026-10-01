@@ -323,11 +323,12 @@
             <label for="f-msg">Cuéntanos un poco más</label>
             <textarea id="f-msg" name="mensaje" rows="4" placeholder="Estilo, espacio, ideas…"></textarea>
           </div>
+          <input type="checkbox" name="botcheck" class="form__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button type="submit" class="btn btn--dark form__submit">
-            Solicitar dossier
+            <span class="form__submit-label">Solicitar dossier</span>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
-          <p class="form__note">Al enviar se abrirá tu aplicación de correo con el mensaje preparado.</p>
+          <p class="form__note">Te responderemos por email con el dossier y disponibilidad.</p>
           <p class="form__status" id="formStatus" role="status"></p>
         </form>
       </div>

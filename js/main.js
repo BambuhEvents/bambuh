@@ -109,10 +109,17 @@
     sections.forEach(s => navIo.observe(s));
   }
 
-  // Formulario → abre el cliente de correo con el mensaje preparado
+  // Formulario → envío directo vía Web3Forms (la access key es pública por diseño)
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
   const MAIL_TO = 'hola@bambuh.es';
+  const WEB3FORMS_KEY = '3bd2ec9d-8da0-4c8a-b2d6-c206a8f6ea7b';
+  const submitBtn = form.querySelector('.form__submit');
+  const submitLabel = submitBtn.querySelector('.form__submit-label');
+  const setStatus = (msg, isError = false) => {
+    status.textContent = msg;
+    status.classList.toggle('is-error', isError);
+  };
   const setError = (input, msg) => {
     const field = input.closest('.field');
     field.classList.toggle('has-error', Boolean(msg));
@@ -128,8 +135,9 @@
   };
   form.querySelectorAll('[required]').forEach(i => i.addEventListener('blur', () => validate(i)));
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
+    if (submitBtn.disabled) return;
     const required = [...form.querySelectorAll('[required]')];
     const invalid = required.filter(i => !validate(i));
     if (invalid.length) { invalid[0].focus(); return; }
@@ -154,7 +162,34 @@
       '¡Gracias!'
     ].join('\n');
 
-    window.location.href = `mailto:${MAIL_TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    status.textContent = `Hemos preparado tu mensaje. Si no se abre tu correo, escríbenos directamente a ${MAIL_TO}.`;
+    const mailto = `mailto:${MAIL_TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    submitBtn.disabled = true;
+    submitLabel.textContent = 'Enviando…';
+    setStatus('');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject,
+          from_name: 'Web Bambüh',
+          replyto: d.email,
+          botcheck: Boolean(d.botcheck),
+          message: body
+        })
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || !json.success) throw new Error(json.message || res.statusText);
+      form.reset();
+      setStatus(`¡Gracias, ${d.nombre}! Hemos recibido tu solicitud y te escribiremos muy pronto a ${d.email}.`);
+    } catch {
+      setStatus(`No hemos podido enviar el formulario. Inténtalo de nuevo o escríbenos a ${MAIL_TO}.`, true);
+      status.innerHTML = status.textContent.replace(MAIL_TO, `<a href="${mailto}">${MAIL_TO}</a>`);
+    } finally {
+      submitBtn.disabled = false;
+      submitLabel.textContent = 'Solicitar dossier';
+    }
   });
 })();

@@ -490,6 +490,9 @@ body::after {
 .form__note { font-size: .85rem; color: var(--text-muted); }
 .form__status { font-size: .95rem; color: var(--olive-700); }
 .form__status:empty { display: none; }
+.form__status.is-error { color: #9B3B2A; }
+.form__submit[disabled] { opacity: .6; cursor: progress; }
+.form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 
 /* ---------- Footer ---------- */
 .footer { background: var(--olive-900); color: var(--text-on-dark-muted); padding-block: var(--space-7) var(--space-5); text-align: center; }
