@@ -8,14 +8,17 @@
   <meta name="theme-color" content="#303120">
   <meta property="og:title" content="Bambüh · Chill outs para eventos">
   <meta property="og:description" content="Más que mobiliario, ambientes que se recuerdan.">
-  <meta property="og:image" content="assets/img/hero.jpg">
+  <meta property="og:image" content="https://bambuh.es/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="preload" as="image" href="assets/img/hero-1600.jpg" imagesrcset="assets/img/hero-1000.jpg 1000w, assets/img/hero-1600.jpg 1600w, assets/img/hero-2400.jpg 2400w" imagesizes="100vw" fetchpriority="high">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=6">
+  <link rel="stylesheet" href="css/styles.css?v=8">
 </head>
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -52,7 +55,7 @@
     <!-- Hero -->
     <section class="hero" id="inicio">
       <div class="hero__media" aria-hidden="true">
-        <img src="assets/img/hero.jpg" alt="" class="hero__img" width="1590" height="1245" fetchpriority="high">
+        <img src="assets/img/hero-1600.jpg" srcset="assets/img/hero-1000.jpg 1000w, assets/img/hero-1600.jpg 1600w, assets/img/hero-2400.jpg 2400w" sizes="100vw" alt="" class="hero__img" width="2400" height="1600" fetchpriority="high">
       </div>
       <div class="hero__veil" aria-hidden="true"></div>
       <div class="hero__content container">
@@ -85,7 +88,7 @@
         </div>
         <figure class="about__media">
           <div class="about__photo reveal-img">
-            <img src="assets/img/night-tall.jpg" alt="Chill out con sofás de bambú y cojines blancos bajo guirnaldas de luces al anochecer" width="570" height="722" loading="lazy">
+            <img src="assets/img/nosotros-800.jpg" srcset="assets/img/nosotros-800.jpg 800w, assets/img/nosotros-1200.jpg 1200w" sizes="(min-width: 900px) 45vw, 100vw" alt="Butaca de bambú con cojín de algodón crudo junto a una mesa baja y un sofá, sobre el césped de un jardín" width="1200" height="1500" loading="lazy">
           </div>
           <img src="assets/img/monogram-dark.png" alt="" aria-hidden="true" class="about__monogram" width="96" height="148" loading="lazy">
         </figure>
@@ -127,7 +130,7 @@
         <div class="services__grid">
           <article class="service service--featured reveal">
             <div class="service__media">
-              <img src="assets/img/hero.jpg" alt="Zona chill out con sofás de bambú frente al mar al atardecer" width="1590" height="1245" loading="lazy">
+              <img src="assets/img/chillout-1000.jpg" srcset="assets/img/chillout-1000.jpg 1000w, assets/img/chillout-1600.jpg 1600w" sizes="(min-width: 768px) 55vw, 100vw" alt="Sofá de bambú con cojines blancos y mesa baja de bambú iluminados por el sol de la tarde sobre el césped" width="1600" height="1200" loading="lazy">
             </div>
             <div class="service__body">
               <span class="badge">Disponible</span>
@@ -199,19 +202,19 @@
 
         <div class="gallery__grid">
           <figure class="gallery__item gallery__item--wide reveal-img">
-            <img src="assets/img/night.jpg" alt="Terraza con chill out iluminado por guirnaldas junto a un edificio histórico" width="994" height="418" loading="lazy">
-            <figcaption>Noches de verano</figcaption>
+            <img src="assets/img/materiales-1000.jpg" srcset="assets/img/materiales-1000.jpg 1000w, assets/img/materiales-1800.jpg 1800w" sizes="(min-width: 700px) 66vw, 100vw" alt="Cojín blanco sobre un sofá de bambú, con la mesa baja de bambú en primer plano" width="1800" height="900" loading="lazy">
+            <figcaption>Materiales nobles</figcaption>
           </figure>
           <figure class="gallery__item gallery__item--tall reveal-img">
-            <img src="assets/img/cushion.jpg" alt="Detalle de cojín de lino con el logotipo de Bambüh sobre un brazo de bambú" width="530" height="722" loading="lazy">
+            <img src="assets/img/bambu-700.jpg" srcset="assets/img/bambu-700.jpg 700w, assets/img/bambu-1000.jpg 1000w" sizes="(min-width: 700px) 33vw, 100vw" alt="Brazo de una butaca de bambú con cojines blancos y el jardín desenfocado al fondo" width="1000" height="1500" loading="lazy">
+            <figcaption>Bambú natural</figcaption>
+          </figure>
+          <figure class="gallery__item reveal-img">
+            <img src="assets/img/textiles-800.jpg" srcset="assets/img/textiles-800.jpg 800w, assets/img/textiles-1200.jpg 1200w" sizes="(min-width: 700px) 33vw, 100vw" alt="Detalle de cojín de algodón crudo junto al brazo de bambú de una butaca" width="1200" height="900" loading="lazy">
             <figcaption>Textiles naturales</figcaption>
           </figure>
           <figure class="gallery__item reveal-img">
-            <img src="assets/img/box.jpg" alt="Caja de cartón kraft con cinta verde oliva y sello Bambüh" width="690" height="820" loading="lazy">
-            <figcaption>Cuidado en cada detalle</figcaption>
-          </figure>
-          <figure class="gallery__item reveal-img">
-            <img src="assets/img/cards.jpg" alt="Tarjetas de visita de Bambüh en crema y verde oliva entre hojas de olivo" width="836" height="820" loading="lazy">
+            <img src="assets/img/identidad-800.jpg" srcset="assets/img/identidad-800.jpg 800w, assets/img/identidad-1200.jpg 1200w" sizes="(min-width: 700px) 33vw, 100vw" alt="Mano sosteniendo un móvil con el nombre Bambüh sobre una mesa de bambú" width="1200" height="900" loading="lazy">
             <figcaption>Identidad Bambüh</figcaption>
           </figure>
         </div>
@@ -253,7 +256,7 @@
     <!-- Frase -->
     <section class="quote" aria-label="Lema">
       <div class="quote__media" aria-hidden="true">
-        <img src="assets/img/night.jpg" alt="" data-parallax width="994" height="418" loading="lazy">
+        <img src="assets/img/jardin-1000.jpg" srcset="assets/img/jardin-1000.jpg 1000w, assets/img/jardin-1920.jpg 1920w" sizes="100vw" alt="" data-parallax width="1920" height="1080" loading="lazy">
       </div>
       <div class="quote__veil" aria-hidden="true"></div>
       <blockquote class="quote__text container">
@@ -356,6 +359,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=6" defer></script>
+  <script src="js/main.js?v=8" defer></script>
 </body>
 </html>

@@ -261,7 +261,7 @@ body::after {
 }
 .hero__media { position: absolute; inset: 0; }
 .hero__img {
-  width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%;
+  width: 100%; height: 100%; object-fit: cover; object-position: 50% 72%;
   transform: scale(1.12);
   animation: kenburns 22s var(--ease-out) forwards;
   filter: saturate(.95);
@@ -364,7 +364,7 @@ body::after {
 .service--featured { padding: 0; overflow: hidden; background: var(--olive-800); color: var(--cream-100); border-color: var(--olive-800); }
 @media (min-width: 768px) { .service--featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.3fr 1fr; } }
 .service--featured .service__media { overflow: hidden; min-height: 280px; }
-.service--featured .service__media img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 100%; transition: transform 1.6s var(--ease-out); }
+.service--featured .service__media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; transition: transform 1.6s var(--ease-out); }
 .service--featured:hover .service__media img { transform: scale(1.05); }
 .service--featured .service__body { padding: clamp(2rem, 4vw, 4rem); display: flex; flex-direction: column; gap: var(--space-2); justify-content: center; }
 .service--featured h3 { font-size: var(--fs-h2); }
@@ -548,12 +548,12 @@ body::after {
   .nav__extra a { padding: .35rem; }
   .nav.is-open .nav__extra { opacity: 1; transition-delay: .5s; }
 
-  /* Hero: texto arriba sobre el cielo, acciones abajo al alcance del pulgar */
+  /* Hero: texto arriba sobre un velo crema, acciones abajo al alcance del pulgar */
   .hero { min-height: 100svh; }
-  .hero__img { object-position: 42% 100%; }
+  .hero__img { object-position: 56% 100%; }
   .hero__veil {
     background:
-      linear-gradient(180deg, rgba(242,237,229,.85) 0, rgba(242,237,229,.35) 38%, rgba(242,237,229,0) 55%),
+      linear-gradient(180deg, rgba(242,237,229,.88) 0, rgba(242,237,229,.72) 30%, rgba(242,237,229,.45) 46%, rgba(242,237,229,0) 62%),
       linear-gradient(0deg, rgba(38,39,25,.78) 0, rgba(38,39,25,.25) 26%, rgba(38,39,25,0) 42%);
   }
   .hero__content { min-height: 100svh; padding-top: 7.25rem; padding-bottom: max(1.75rem, env(safe-area-inset-bottom)); }
