@@ -18,7 +18,7 @@ python -m http.server 8080
 
 ## Cosas a revisar antes de publicar
 
-- **Email e Instagram**: `hola@bambuh.es` y `@bambuh.eventos` (sacados del board de identidad). El email está en `index.html` y en `MAIL_TO` de `js/main.js`.
+- **Email e Instagram**: `hola@bambuh.es` y `@bambuhevents` (sacados del board de identidad). El email está en `index.html` y en `MAIL_TO` de `js/main.js`.
 - **Fotos**: sesión real de producto. Los originales en alta resolución están en `fotos-originales/` (ignorada por git: pesan ~70 MB y no deben publicarse). En `assets/img/` hay recortes optimizados en dos o tres anchos cada uno (`nombre-ANCHO.jpg`, servidos con `srcset`):
 
   | Archivo web | Original | Dónde se usa |
