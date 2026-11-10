@@ -50,6 +50,7 @@
   function updateBar() {
     if (!bar) return;
     const vh = window.innerHeight;
+    if (!heroEl || !contactEl) return;
     const show = heroEl.getBoundingClientRect().bottom < vh * 0.4 && contactEl.getBoundingClientRect().top > vh * 0.85;
     if (show === barShown) return;
     barShown = show;
@@ -98,7 +99,7 @@
 
   // Enlace activo en la navegación
   const links = [...document.querySelectorAll('.nav__link')];
-  const sections = links.map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+  const sections = links.map(l => l.getAttribute('href')).filter(h => h.startsWith('#')).map(h => document.querySelector(h)).filter(Boolean);
   if ('IntersectionObserver' in window) {
     const navIo = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -111,6 +112,7 @@
 
   // Formulario → envío directo vía Web3Forms (la access key es pública por diseño)
   const form = document.getElementById('contactForm');
+  if (!form) return; // páginas sin formulario (404, subpáginas)
   const status = document.getElementById('formStatus');
   const MAIL_TO = 'hola@bambuh.es';
   const WEB3FORMS_KEY = '3bd2ec9d-8da0-4c8a-b2d6-c206a8f6ea7b';
