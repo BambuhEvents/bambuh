@@ -4,9 +4,13 @@
   root.classList.add('js');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Entrada del hero
+  // Entrada del hero: arranca en cuanto la foto del hero y las fuentes están listas,
+  // sin esperar al resto de la página (mejora el LCP)
   const start = () => requestAnimationFrame(() => document.body.classList.add('is-loaded'));
-  if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
+  const heroImg = document.querySelector('.hero__img');
+  const heroReady = heroImg && heroImg.decode ? heroImg.decode().catch(() => {}) : Promise.resolve();
+  const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
+  Promise.all([heroReady, fontsReady]).then(start);
   setTimeout(start, 1200); // por si alguna imagen tarda demasiado
 
   // Año del footer
