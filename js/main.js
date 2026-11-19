@@ -114,6 +114,13 @@
     sections.forEach(s => navIo.observe(s));
   }
 
+  // Preguntas frecuentes: solo una respuesta abierta a la vez
+  // (refuerzo para navegadores sin soporte del atributo name en <details>)
+  const faqItems = [...document.querySelectorAll('.faq__item')];
+  faqItems.forEach(item => item.addEventListener('toggle', () => {
+    if (item.open) faqItems.forEach(other => { if (other !== item) other.open = false; });
+  }));
+
   // Formulario → envío directo vía Web3Forms (la access key es pública por diseño)
   const form = document.getElementById('contactForm');
   if (!form) return; // páginas sin formulario (404, subpáginas)

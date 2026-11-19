@@ -454,6 +454,37 @@ body::after {
 .quote__text em { color: var(--linen-300); }
 .quote__mono { width: 44px; opacity: .85; }
 
+/* ---------- Preguntas frecuentes ---------- */
+.faq { background: var(--bg-alt); }
+.faq__grid { display: grid; gap: var(--space-4); }
+@media (min-width: 960px) { .faq__grid { grid-template-columns: 1fr 1.4fr; gap: clamp(3rem, 7vw, 7rem); align-items: start; } }
+.faq__list { border-top: 1px solid var(--line); }
+.faq__item { border-bottom: 1px solid var(--line); interpolate-size: allow-keywords; }
+.faq__q {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
+  padding: var(--space-3) 0;
+  font-family: var(--font-display); font-weight: 400; font-size: clamp(1.3rem, 1.15rem + .6vw, 1.6rem); line-height: 1.25;
+  color: var(--text);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.faq__q::-webkit-details-marker { display: none; }
+/* Signo + que gira a − al abrir */
+.faq__q::after {
+  content: ""; flex: none; width: 14px; height: 14px;
+  background:
+    linear-gradient(currentColor, currentColor) center / 100% 1px no-repeat,
+    linear-gradient(currentColor, currentColor) center / 1px 100% no-repeat;
+  transition: transform var(--dur) var(--ease-out), background-size var(--dur) var(--ease-out);
+}
+.faq__item[open] > .faq__q::after { transform: rotate(180deg); background-size: 100% 1px, 1px 0; }
+.faq__q:hover { color: var(--accent); }
+.faq__q:focus-visible { outline: 1px solid var(--focus); outline-offset: 4px; }
+.faq__a { padding-bottom: var(--space-3); color: var(--text-muted); max-width: 38rem; }
+/* Apertura suave donde el navegador lo permite; en el resto se abre sin animación */
+.faq__item::details-content { block-size: 0; overflow: hidden; transition: block-size var(--dur) var(--ease-out), content-visibility var(--dur) allow-discrete; }
+.faq__item[open]::details-content { block-size: auto; }
+
 /* ---------- Contacto ---------- */
 .contact__grid { display: grid; gap: var(--space-6); }
 @media (min-width: 960px) { .contact__grid { grid-template-columns: 1fr 1.2fr; gap: clamp(3rem, 7vw, 7rem); } }
